@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recetario Dinámico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Recetario</h1>
+        <input type="text" id="buscador" placeholder="Buscar por ingrediente o nombre...">
+        
+        <nav class="filtros">
+            <button class="btn-filtro" data-categoria="Todas">Todas</button>
+            <button class="btn-filtro" data-categoria="Desayuno">Desayunos</button>
+            <button class="btn-filtro" data-categoria="Cena">Cenas</button>
+            <button class="btn-filtro" data-categoria="Postre">Postres</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- JavaScript inyectará las tarjetas aquí -->
+        <section id="grid-recetas" class="grid"></section>
+    </main>
+    <div id="modal-receta" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" id="btn-cerrar">&times;</span>
+            <img id="modal-img" src="" alt="Imagen de la receta">
+            <h2 id="modal-titulo">Título de la receta</h2>
+            <div class="modal-meta">
+                <span id="modal-tiempo"></span> | <span id="modal-dificultad"></span>
+            </div>
+            <p id="modal-descripcion"></p>
+            <h3>Instrucciones:</h3>
+            <p id="modal-instrucciones"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
